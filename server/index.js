@@ -59,9 +59,13 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', service: 'Revenue Sentinel API', timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-    console.log(`\n🛡️  Revenue Sentinel API running on http://localhost:${PORT}`);
-    console.log(`   GET /api/customers`);
-    console.log(`   GET /api/analyze/:customerId  (SSE stream)`);
-    console.log(`   GET /api/health\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`\n🛡️  Revenue Sentinel API running on http://localhost:${PORT}`);
+        console.log(`   GET /api/customers`);
+        console.log(`   GET /api/analyze/:customerId  (SSE stream)`);
+        console.log(`   GET /api/health\n`);
+    });
+}
+
+module.exports = app;
