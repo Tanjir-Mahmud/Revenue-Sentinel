@@ -2,7 +2,7 @@
 
 **Revenue Sentinel** is a high-stakes Customer Success & Revenue Protection Agent. This autonomous system monitors real-time customer usage logs and support tickets indexed in Elasticsearch to prevent churn and identify high-value expansion opportunities.
 
-![Dashboard Preview](https://raw.githubusercontent.com/Tanjir-Mahmud/Revenue-Sentinel/main/preview.png) *(Note: Placeholder for actual screenshot)*
+![Dashboard Preview](preview.png)
 
 ## 🚀 Overview
 
